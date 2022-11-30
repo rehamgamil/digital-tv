@@ -30,10 +30,13 @@
 export default {}
 </script>
 
-<style>
-
-.icons{
+<style lang="scss">
+.footer__social-icons {
+  display: flex;
+  .icons{
   width: 26px;
   
 }
+}
+
 </style>

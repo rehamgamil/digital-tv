@@ -1,14 +1,11 @@
 <template>
-
-<div>
-  <div class="d-flex gap-3">
- <img src="@/assets/images/live.png" alt="" class="live-icon">
- <h3 class="pb-3">Live Racec</h3>
-
-
-</div>
+ <page-banner height="367px"/>
+<div class="page">
 
 <live-list/>
+<today-list/>
+<last-list/>
+
 </div>
 
     
@@ -75,13 +72,16 @@
 
 <script>
 import LiveList from '@/components/Live/LiveList.vue'
+import PageBanner from '@/components/ui/PageBanner.vue'
+import TodayList from '@/components/todayRacec/todayList.vue'
+import LastList from '@/components/lastRacec/lastList.vue'
 //import LiveList from '@/components/LiveRacec/LiveList.vue'
 //import BaseModalContent from '@/components/baseModalContent.vue'
 //import MembershipCard from './components/MembershipCard.vue'
 //import homeService from './home.service'
 
 export default {
-  components: { LiveList },
+  components: { LiveList, PageBanner, TodayList, LastList },
  
   name:
     'HomePage',
@@ -122,5 +122,10 @@ export default {
 
 .live-icon{
   height: 30px;
+}
+.page{
+  width: 90%;
+  margin: auto;
+  
 }
 </style>
