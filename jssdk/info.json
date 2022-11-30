@@ -1,0 +1,11 @@
+{
+  "debug": false,
+  "initiate": {
+    "method": "post",
+    "path": "payment/initiate"
+  },
+  "register": {
+    "method": "post",
+    "path": "payment/orderStatus"
+  }
+}

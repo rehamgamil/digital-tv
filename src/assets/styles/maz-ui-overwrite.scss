@@ -1,0 +1,46 @@
+// #region inputs
+.m-input,
+.m-phone-number-input,
+.main-select,
+.main-textarea {
+  margin: 0 0.5rem 1rem;
+}
+// #endregion inputs
+
+// #region dropdown
+.m-input-label {
+  left: initial !important;
+  padding-inline-start: 1rem;
+}
+
+html[lang='ar'] .m-phone-number-input__country-flag {
+  right: 18px;
+  left: initial !important;
+}
+
+.m-phone-number-input:not(.--no-flags)
+  .m-phone-number-input__select
+  .m-input-wrapper
+  input {
+  padding-left: initial !important;
+  padding-inline-start: 2.75rem;
+}
+
+.m-phone-number-input__select:not(.--no-country-code) .m-input-wrapper {
+  border-start-end-radius: 0 !important;
+  border-end-end-radius: 0 !important;
+  border-end-start-radius: 0.5rem !important;
+  border-start-start-radius: 0.5rem !important;
+}
+.m-phone-number-input__input.--border-radius .m-input-wrapper {
+  border-start-end-radius: 0.5rem !important;
+  border-end-end-radius: 0.5rem !important;
+  border-end-start-radius: 0 !important;
+  border-start-start-radius: 0 !important;
+}
+
+.m-phone-number-input__input,
+.m-phone-number-input__select {
+  margin: 0;
+}
+// #endregion dropdown

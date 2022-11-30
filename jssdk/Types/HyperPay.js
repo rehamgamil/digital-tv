@@ -1,0 +1,109 @@
+/* eslint-disable */
+import {BaseType} from "./BaseType";
+
+class HyperPay extends BaseType {
+    async initPayment(configurations = {}) {
+        let axios = await this.getAxios();
+
+        let {initiate} = await this.sdk.loadInfo();
+        return await axios[initiate.method](initiate.path, this.sdk.withConfig(configurations));
+    }
+
+    initPaymentBuildResponse(success = true, payload = {}) {
+        let gateway = this.sdk.getConfig('payment_gateway', payload && payload['gateway'] || undefined);
+        // let is_live = this.sdk.getConfig('is_live', 0);
+
+        let results = {
+            success, gateway, //is_live,
+        };
+
+        if (success) {
+            results = {
+                ...results, 
+                url: payload['checkout_url'] || "",
+                id: payload['checkoutID'] || ""
+            }
+        } else {
+            if ("response" in payload && "data" in payload.response) {
+                payload = payload.response['data'] || {};
+            }
+            results = {
+                ...results,
+                errors: [],
+                message: payload['message'] || ""
+            }
+        }
+
+        return results;
+    }
+
+    async registerPayment(body = {}) {
+        let axios = await this.getAxios();
+
+        if (body && (!body.orderId && body.id)) {
+            body.orderId = body.id;
+        }
+        
+        return this.sdk.loadInfo()
+            .then(info => {
+                let {register} = info;
+
+                return axios[register.method](register.path, this.sdk.withBaseData(body));
+            });
+    }
+
+    registerPaymentBuildResponse(success = true, payload = {}) {
+        let {gateway, message, data, response} = payload;
+        gateway = gateway || this.sdk.getConfig('payment_gateway');
+        response = response || {};
+        data = data || response['data'] || {};
+        message = message || data['message'] || "";
+        let errors = [];
+
+        let results = {
+            success, gateway,
+        };
+
+        if (success) {
+            results = {
+                ...results, data
+            }
+        } else {
+            if (response && 'data' in response) {
+                data = response['data'] || {};
+
+                if (data && 'data' in data) {
+                    data = data['data'] || {};
+                }
+
+                if (data && 'message' in data) {
+                    message = data['message'] || "";
+                }
+
+                errors = data && data['errors'] || [];
+                message = data && data['message'] || message;
+            }
+
+            if (message && typeof message === 'object' && 'message' in message) {
+                message = message['message'] || "";
+            }
+
+            results = {
+                ...results,
+                errors,
+                message
+            }
+        }
+
+        return results;
+    }
+}
+
+const $exports = {
+    async make(sdk, config = {}) {
+        await sdk.init(config);
+        return new HyperPay(sdk);
+    }
+};
+
+export default $exports

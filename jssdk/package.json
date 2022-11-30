@@ -1,0 +1,20 @@
+{
+  "name": "payment-gateway-server",
+  "version": "2.0.0",
+  "description": "Dafa SDK For Payment Gateway.",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dafa-Co/Main_Payment_Node_Frontend.git"
+  },
+  "author": {
+    "name": "Mohammad AlSafadi",
+    "email": "mPhpMaster@gmail.com",
+    "copyright": "https://www.dafa.sa/"
+  },
+  "dependencies": {
+    "axios": "^1.1.0"
+  },
+  "devDependencies": {}
+}

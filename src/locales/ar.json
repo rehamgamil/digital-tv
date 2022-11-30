@@ -1,0 +1,170 @@
+{
+  "global": {
+    "appName": "Digital-TV",
+    "currency": " ر.س",
+    "months": "شهور",
+    "month": "شهر",
+    "yes": "نعم",
+    "no": "لا",
+    "update": "تعديل",
+    "search": "بحث",
+    "apiCatch": "تعذر الاتصال، برجاء إعادة المحاولة في وقت لاحق.",
+    "details": "التفاصيل",
+    "apply": "تطبيق",
+    "name": "الاسم",
+    "IDNumber": "رقم الهوية",
+    "email": "البريد الإلكتروني",
+    "birthDate": "تاريخ الميلاد",
+    "gender": "الجنس",
+    "maritalStatus": "الحالة الإجتماعية",
+    "phoneNumber": "رقم الهاتف",
+    "mobileNumber": "رقم الموبايل",
+    "password": "كلمة السر",
+    "confirmPassword": "تأكيد كلمة السر",
+    "profileImage": "الصورة الشخصية",
+    "formalPhoto": "الصورة الرسمية",
+    "placeOfBirth": "مكان الميلاد",
+    "profession": "المهنة",
+    "nationalAddress": "العنوان الوطني",
+    "dismiss": "إغلاق",
+    "agreeTermsAndConditions": "أوافق على الشروط والأحكام",
+    "close": "أغلاق",
+    "enterSubject": "أدخل الموضوع",
+    "addDependent": "إضافة تابع",
+    "searchByPhoneNumber": "البحث عن طريق رقم الهاتف:",
+    "or": "أو",
+    "addNewMember": "إضافة عضو جديد",
+    "Descreption": "الوصف",
+    "Services": "الخدمات"
+  },
+  "addMember": {
+    "addMemberInformation": "أضف معلومات العضو",
+    "fullName": "الأسم كامل",
+    "first": "الأول",
+    "second": "الثاني",
+    "third": "الثالث",
+    "fourth": "الرابع",
+    "phoneNumber": "اكتب رقم هاتفك",
+    "gender": "اختر جنسك",
+    "idNumber": "اكتب رقم الهوية الخاص بك",
+    "place": "اكتب مكان ميلادك",
+    "occupation": "اكتب وظيفتك الحالية",
+    "national": "اكتب عنوانك الوطني",
+    "formalPhoto": "صورة رسمية",
+    "next": "التالي"
+  },
+  "payment": {
+    "pay": "دفع",
+    "checkout": "الدفع",
+    "paymentStatus": "حالة الدفع",
+    "paymentSuccess": "تم الدفع بنجاح.",
+    "paymentFailed": "فشل الدفع ، حدث خطأ ما."
+  },
+  "languages": {
+    "en": "الإنجليزية",
+    "ar": "العربية"
+  },
+  "phonePicker": {
+    "countryCode": "كود الدولة",
+    "chooseCountry": "أختر دولة",
+    "phoneNumber": "الهاتف",
+    "example": "مثال:"
+  },
+  "form": {
+    "browse": "أختر",
+    "preview": "عرض",
+    "fileName": "اسم الملف",
+    "size": "الحجم",
+    "KB": "KB",
+    "upload": "رفع",
+    "pleaseSelectImage": "من فضلك أختر صورة"
+  },
+  "table": {
+    "thereAreNoData": "لا يوجد بيانات",
+    "rows": "صفوف"
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signUp": "تسجيل حساب",
+    "logout": "تسجيل الخروج",
+    "createNewAccount": "إنشاء حساب جديد",
+    "activeNewClient": "تنشيط عميل جديد",
+    "rememberMe": "تذكرنى",
+    "forgotPassword": "هل نسيت كلمة السر؟",
+    "dontHaveAccount": "ليس لديك حساب؟",
+    "alreadyHaveAccount": "بالفعل لديك حساب؟",
+    "insertYourPersonalInformation": "أدخل معلوماتك الشخصية",
+    "briefAboutYourAcademicAndProfessionalLife": "موجز عن حياتك الأكاديمية والمهنية",
+    "EnterTheCodeYouRecivedOnYourPhone": "أدخل الرمز الذي تلقيته على هاتفك",
+    "verify": "تحقق",
+    "otp": "رمز الأمان"
+  },
+  "profile": {
+    "moduleName": "ملفي الشخصي",
+    "id": "رقم الهوية",
+    "memberSince": "عضو منذ",
+    "totalPurchases": "إجمالي المشتريات",
+    "myMembership": {
+      "moduleName": "عضويتي"
+    },
+    "information": {
+      "moduleName": "معلومات"
+    },
+    "purchases": {
+      "moduleName": "المشتريات"
+    },
+    "family": {
+      "moduleName": "العائلة"
+    }
+  },
+  "contact": {
+    "address": "عنوان",
+    "location": "2 مخرج الرياض ",
+    "street": "شارع 100",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "send": "إرسال",
+    "messageHasBeenSended": "تم إرسال رسالتك",
+    "contactYouSoon": "سوف نتصل بك قريبا",
+    "enterYourMessage": " أدخل رسالتك"
+  },
+  "memberships": {
+    "moduleName": "العضويتات",
+    "item": "العضوية",
+    "all": "كل العضويتات",
+    "purchaseDate": "تاريخ الشراء",
+    "price": "السعر",
+    "orderSummary": "ملخص الطلب",
+    "yourOrderDetails": "تفاصيل طلبك",
+    "registrationFees": "رسوم التسجيل",
+    "VAT": "ضريبة القيمة المضافة",
+    "total": "الإجمالي",
+    "proceedToPayment": "الشروع في دفع",
+    "paymentReceived": "تم استلام الدفعة",
+    "weReceivedPayment": "لقد تلقيناالدفع",
+    "paymentDetails": "بيانات الدفع",
+    "amount": "قيمة",
+    "date": "تاريخ",
+    "methode": "طريقةالدفع",
+    "referenceNo": "رقم المرجع"
+  },
+  "aboutUs": {
+    "moduleName": "عنا"
+  },
+  "contacts": {
+    "moduleName": "تواصل معنا"
+  },
+  "checkOut":{
+    "purchase": "شراء",
+    "paymentMethod": "طريقة الدفع او السداد",
+    "cashPayment": "دفع نقدا",
+    "onlinePayment": "الدفع الالكتروني",
+    "setYourPaymentMethod": "حدد طريقة الدفع الخاصة بك",
+    "couponCode": "أدخل رمز القسيمة الخاص بك إذا كان لديك واحد.",
+    "subtotal": "مبلغ إجمالي",
+    "checkoutYourOrder": "تحقق من طلبك",
+    "product": "منتج",
+    "IAgree": "أنا موافق",
+    "conditions": "الأحكام والشروط"
+  }
+}

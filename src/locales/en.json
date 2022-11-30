@@ -1,0 +1,171 @@
+{
+  "global": {
+    "appName": "Frusiya membership",
+    "currency": " SAR",
+    "months": "Months",
+    "month": "Month",
+    "yes": "Yes",
+    "no": "No",
+    "update": "Update",
+    "search": "Search",
+    "apiCatch": "Error to connect, please try again later.",
+    "details": "Details",
+    "apply": "Apply",
+    "name": "Name",
+    "IDNumber": "ID number",
+    "email": "E-mail",
+    "birthDate": "Birth date",
+    "gender": "Gender",
+    "maritalStatus": "Marital status",
+    "phoneNumber": "Phone number",
+    "mobileNumber": "Mobile number",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "profileImage": "Profile image",
+    "formalPhoto": "Formal photo",
+    "placeOfBirth": "Place of birth",
+    "profession": "Occupation",
+    "nationalAddress": "National address",
+    "dismiss": "Dismiss",
+    "agreeTermsAndConditions": "Agree Terms And Conditions",
+    "close": "CLOSE",
+    "enterSubject": "Enter Subject",
+    "addDependent": "Add Dependent",
+    "searchByPhoneNumber": "search by phone number :",
+    "or": "or",
+    "addNewMember": "Add New Member",
+    "Descreption": "Descreption",
+    "Services": "Services"
+  },
+  "addMember": {
+    "addMemberInformation": "Add Member Information",
+    "fullName": "Full name",
+    "first": "First",
+    "second": "Second",
+    "third": "Third",
+    "fourth": "Fourth",
+    "phoneNumber": "Type your phone number",
+    "gender": "Select your Gender",
+    "idNumber": "Type your id number",
+    "place": "Type your place of birth",
+    "occupation": "Type your current occupation",
+    "national": "Type your national address",
+    "formalPhoto": "Formal photo",
+    "next": "next"
+  },
+  "payment": {
+    "pay": "Pay",
+    "checkout": "Checkout",
+    "paymentStatus": "Payment status",
+    "paymentSuccess": "Payment completed successfully.",
+    "paymentFailed": "Payment failed, something went wrong."
+  },
+  "languages": {
+    "en": "English",
+    "ar": "Arabic"
+  },
+  "phonePicker": {
+    "countryCode": "Country code",
+    "chooseCountry": "Choose country",
+    "phoneNumber": "Phone number",
+    "example": "Example:"
+  },
+  "form": {
+    "browse": "Browse",
+    "preview": "Preview",
+    "fileName": "File name",
+    "size": "Size",
+    "KB": "KB",
+    "upload": "Upload",
+    "pleaseSelectImage": "Please select image"
+  },
+  "table": {
+    "thereAreNoData": "There are no data",
+    "rows": "rows"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "logout": "Logout",
+    "createNewAccount": "Create new account",
+    "activeNewClient": "Active new client",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have account?",
+    "insertYourPersonalInformation": "Insert your personal information",
+    "briefAboutYourAcademicAndProfessionalLife": "Brief about your academic and professional life",
+    "EnterTheCodeYouRecivedOnYourPhone": "Enter The code you recived on your phone",
+    "verify": "verify",
+    "otp": "OTP"
+  },
+  "profile": {
+    "moduleName": "My Profile",
+    "id": "ID",
+    "memberSince": "Member Since",
+    "totalPurchases": "Total Purchases",
+    "myMembership": {
+      "moduleName": "My Membership"
+    },
+    "information": {
+      "moduleName": "Information"
+    },
+    "purchases": {
+      "moduleName": "Purchases"
+    },
+    "family": {
+      "moduleName": "Family"
+    }
+  },
+  "contact": {
+    "address": "Address",
+    "location": "Riyadh Exit2",
+    "street": "Street 100",
+    "phone": "Phone",
+    "email": "Email",
+    "send": "send",
+    "messageHasBeenSended": "Your Message Has Been Sended",
+    "contactYouSoon": "we will contact you soon",
+    "enterYourMessage": " Enter your Message"
+  },
+  "memberships": {
+    "moduleName": "Memberships",
+    "item": "Membership",
+    "all": "All Memberships",
+    "purchaseDate": "Purchase Date",
+    "price": "Price",
+    "orderSummary": "Order summary",
+    "yourOrderDetails": "Your Order Details",
+    "registrationFees": "Registration Fees",
+    "VAT": "VAT",
+    "total": "Total",
+    "proceedToPayment": "Proceed to Payment",
+    "paymentReceived": "Payment Received",
+    "weReceivedPayment": "we've received payment",
+    "paymentDetails": "PAYMENT DETAILS",
+    "amount": "Amount",
+    "date": "Date",
+    "methode": "Methode",
+    "referenceNo": "Reference NO."
+  },
+  "aboutUs": {
+    "moduleName": "About us"
+  },
+  "contacts": {
+    "moduleName": "Contacts"
+  },
+  "checkOut":{
+    "purchase": "Purchase",
+    "paymentMethod": "Payment Method",
+    "cashPayment": "Cash Payment",
+    "onlinePayment": "Online Payment",
+    "setYourPaymentMethod": "SET YOUR PAYMENT METHOD",
+    "couponCode": "Enter your coupon code if you have one.",
+    "apply": "Apply",
+    "subtotal": "Subtotal",
+    "checkoutYourOrder": "CHECKOUT YOUR ORDER",
+    "product": "Product",
+    "IAgree": "I agree",
+    "conditions": "terms and conditions"
+  }
+}

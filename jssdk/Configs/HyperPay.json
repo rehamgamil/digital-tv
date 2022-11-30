@@ -1,0 +1,25 @@
+{
+  "info": {
+    "payment_gateway": "HyperPay",
+    "payment_gateway_type": "Hosted",
+    "locale": "en",
+    "currency": "SAR"
+  },
+  "data": {
+    "is_mada": 0,
+    "amount": "0.00",
+    "name": "",
+    "reference": "",
+    "merchant_transaction_id": "",
+    "address": {
+      "customer_email": "",
+      "street1": "",
+      "city ": "",
+      "state": "",
+      "country": "",
+      "postcode": "",
+      "first_name": "",
+      "last_name": ""
+    }
+  }
+}

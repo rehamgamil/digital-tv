@@ -1,0 +1,53 @@
+:root {
+  --bs-primary: var(--co-primary);
+  --bs-primary-rgb: var(--co-primary-rgb);
+  --bs-secondary-rgb: var(--co-secondary-text-rgb);
+  --bs-body-color: var(--co-body-text);
+}
+
+// #region buttuns
+.btn-primary {
+  --bs-btn-color: var(--co-primary-text);
+  --bs-btn-bg: var(--co-primary);
+  --bs-btn-border-color: var(--co-primary);
+  --bs-btn-hover-color: var(--co-primary-text);
+  --bs-btn-hover-bg: var(--co-primary-dark);
+  --bs-btn-hover-border-color: var(--co-primary-dark);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: var(--co-primary-text);
+  --bs-btn-active-bg: var(--co-primary-dark);
+  --bs-btn-active-border-color: var(--co-primary-dark);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--co-primary-text);
+  --bs-btn-disabled-bg: var(--co-primary);
+  --bs-btn-disabled-border-color: var(--co-primary);
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--co-primary);
+  --bs-btn-border-color: var(--co-primary);
+  --bs-btn-hover-color: var(--co-primary-text);
+  --bs-btn-hover-bg: var(--co-primary);
+  --bs-btn-hover-border-color: var(--co-primary);
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+  --bs-btn-active-color: var(--co-primary-text);
+  --bs-btn-active-bg: var(--co-primary);
+  --bs-btn-active-border-color: var(--co-primary);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--co-primary);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--co-primary);
+  --bs-gradient: none;
+}
+// #endregion buttuns
+
+// #region dropdown
+.dropdown-toggle::after {
+  margin-inline: 0.255em;
+}
+.dropdown-menu {
+  text-align: initial;
+}
+.dropdown-menu[data-bs-popper] {
+  left: initial;
+}
+// #endregion dropdown

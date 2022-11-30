@@ -1,0 +1,25 @@
+{
+  "info": {
+    "payment_gateway": "Noon",
+    "payment_gateway_type": "Hosted",
+    "return_url": "http://localhost:8080/noon_return",
+    "style_profile": "Tuxedo",
+    "locale": "en"
+  },
+  "data": {
+    "amount": "0",
+    "name": "",
+    "reference": "",
+    "address": {
+      "customer_email": "",
+      "street1": "",
+      "city ": "",
+      "state": "",
+      "country": "",
+      "postcode": "",
+      "first_name": "",
+      "last_name": ""
+    }
+  }
+}
+
