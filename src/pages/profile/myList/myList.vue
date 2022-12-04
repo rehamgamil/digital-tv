@@ -1,6 +1,12 @@
 <template>
   <div class="">
-    <b-row class="family-member">
+    <h5 class="mb-3 fw-bold">Up Coming Racec</h5>
+    <home-card class="my-list"/>
+    <h5 class="my-3 fw-bold">Live Racec</h5>
+    <home-card class="my-list"/>
+
+
+    <!-- <b-row class="family-member">
       <b-col
         md="4"
         class=""
@@ -34,8 +40,8 @@
     <b-button v-b-modal.add-dependent variant="primary" class="mt-4">
       <i class="fas fa-user-plus btn-dependent"></i
       >{{ $t('global.addDependent') }}</b-button
-    >
-    <b-modal
+    > -->
+    <!-- <b-modal
       id="add-dependent"
       size="xl"
       hide-footer
@@ -65,13 +71,15 @@
       >
         {{ $t('global.addNewMember') }}
       </b-button>
-    </b-modal>
+    </b-modal> -->
   </div>
 </template>
 
 <script>
+import homeCard from '@/components/ui/homeCard.vue'
 import familyService from './familyService'
 export default {
+  components: { homeCard },
   name: 'FamilyPage',
   data() {
     return {
@@ -107,5 +115,8 @@ export default {
 
 .btn-dependent {
   padding-inline-end: 10px;
+}
+.my-list{
+  width: 30%;
 }
 </style>

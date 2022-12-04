@@ -1,7 +1,8 @@
 <template>
-  <div class="d-flex gap-3 mt-5 mb-3">
+  <div class="pt-5">
+  <div class="d-flex gap-3 ">
  <img src="@/assets/images/live.png" alt="" class="live-icon">
- <h3 class="fw-bold">Live Racec</h3>
+ <h3 class="fw-bold mb-3">Live Racec</h3>
 
 
 </div>
@@ -10,6 +11,7 @@
   >
   
     <live-card v-for="item in 4" :key="item" />
+  </div> 
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <home-card > </home-card>
+  <home-card class=""> </home-card>
 </template>
 
 <script>

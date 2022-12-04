@@ -110,11 +110,9 @@
     "information": {
       "moduleName": "Information"
     },
-    "purchases": {
-      "moduleName": "Purchases"
-    },
-    "family": {
-      "moduleName": "Family"
+   
+    "list": {
+      "moduleName": "My List"
     }
   },
   "contact": {

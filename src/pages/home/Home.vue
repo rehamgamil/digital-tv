@@ -1,14 +1,27 @@
 <template>
  <page-banner height="367px"/>
-<div class="page">
 
-<live-list/>
+ <div class="layer-home ">
+  <div class="profile-card ">
+    <div class="personal-data p-2">
+     
+      <h3 class="fw-bold mb-2">JCSA Tickets</h3>
+      <p>Riyadh Racing season is underway at King Abdulaziz Racecourse and tickets are on sale now. Runningevery Thursday Friday and Saturday until Saturday March 18, 2023 the 2022-2023 race programme features number of important domestic cups as well as The Saudi Cup on February 24-25, 2023.Choose date to attend Riyadah Racing season underway at King Abdulaziz Racecourse and tickets are on sale now. Running every Thursday,Friday and Saturday until Saturday March 18, 2023 the 2022 race programme features anumber of important domestic cups as well as The Saudi Cup on February 24-25, 2023.</p>
+     
+    </div>
+
+   
+  </div>
+ </div>
+<div class="page">
+  
+<live-list class="mt-5"/>
 <today-list/>
 <last-list/>
 
 </div>
 
-    
+  
 
 
 
@@ -126,6 +139,21 @@ export default {
 .page{
   width: 90%;
   margin: auto;
+ 
   
+}
+.layer-home{
+   position: relative;
+   width: 80%;
+   margin: auto;
+}
+
+.profile-card{
+  position: absolute;
+    top: -7rem;
+padding: 10px;
+    border: 1px solid #0e1815;
+    border-radius: 1rem;
+    background-color: var(--co-body-bg);
 }
 </style>

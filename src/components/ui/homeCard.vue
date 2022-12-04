@@ -1,5 +1,5 @@
 <template>
-  <div class="live-card">
+  <div class="live-card ">
     <div class="d-flex live-racec">
       <b-row class="box">
         <div class="image-live">

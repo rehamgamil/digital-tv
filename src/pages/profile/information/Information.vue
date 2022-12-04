@@ -5,8 +5,14 @@
     <b-form @submit.prevent="onSubmit">
       <b-row>
         <b-col lg="6">
+          <MainInput
+            v-model="user.fullName"
+            label="Full Name"
+            id="user-fullName"
+          />
+
           <!-- :value="user.phone" -->
-          <PhonePicker
+          <!-- <PhonePicker
             :phone="user.phone"
             :phoneCC="user.phoneCC"
             :phoneCCName="user.phoneCCName"
@@ -18,6 +24,14 @@
             "
             :label="$t('global.mobileNumber')"
             id="user-phone"
+          /> -->
+        </b-col>
+
+        <b-col lg="6">
+          <MainInput
+            v-model="user.id_number"
+            :label="$t('global.IDNumber')"
+            id="user-idNumber"
           />
         </b-col>
         <b-col lg="6">
@@ -25,6 +39,21 @@
             v-model="user.email"
             :label="$t('global.email')"
             id="user-email"
+          />
+        </b-col>
+        <b-col lg="6">
+          <PhonePicker
+            :phone="user.phone"
+            :phoneCC="user.phoneCC"
+            :phoneCCName="user.phoneCCName"
+            v-on:valueChanged="
+              user.phone = $event?.nationalNumber,
+              user.phoneCC = $event?.countryCallingCode,
+              user.phoneCCName = $event?.countryCode,
+              user.phoneWithCC = $event?.e164
+            "
+            label="Mobile Number"
+            id="user-phone"
           />
         </b-col>
 
@@ -63,57 +92,53 @@
           />
         </b-col>
 
-        <b-col lg="6">
-          <MainInput
-            v-model="user.id_number"
-            :label="$t('global.IDNumber')"
-            id="user-idNumber"
-          />
-        </b-col>
-        <b-col lg="6">
+        <!-- <b-col lg="6">
           <MainInput
             v-model="user.birth_place"
             :label="$t('global.placeOfBirth')"
             id="user-birthPlace"
           />
-        </b-col>
+        </b-col> -->
 
-        <b-col lg="6">
+        <!-- <b-col lg="6">
           <MainInput
             v-model="user.profession"
             :label="$t('global.profession')"
             id="user-profession"
           />
-        </b-col>
-        <b-col lg="6">
+        </b-col> -->
+        <!-- <b-col lg="6">
           <MainInput
             v-model="user.national_address"
             :label="$t('global.nationalAddress')"
             id="user-nationalAddress"
           />
-        </b-col>
+        </b-col> -->
 
-        <b-col lg="12">
+        <!-- <b-col lg="12">
           <MainTextarea
             :value="user.academic_brief"
             v-on:valueChanged="user.academic_brief = $event"
             :label="$t('auth.briefAboutYourAcademicAndProfessionalLife')"
             id="user-academicBrief"
           />
-        </b-col>
+        </b-col> -->
 
         <b-col lg="12">
           <input-file
             v-on:valueChanged="user.profile_photo_path = $event"
-            :label="$t('global.profileImage')"
+            label=""
             id="profileImage"
             :url="`${uploadImageURL}${user.id}`"
             :uploadStatus="true"
           />
         </b-col>
       </b-row>
-
-      <SubmitBtn :label="$t('global.update')" :loading="loading" />
+      <div class="save-information">
+        <button label="save" :loading="loading" class="btn-information">
+          Save
+        </button>
+      </div>
     </b-form>
   </div>
 </template>
@@ -167,3 +192,18 @@ export default {
   },
 }
 </script>
+
+<style>
+.btn-information {
+  background-color: var(--co-primary);
+  padding: 15px;
+  width: 50%;
+  color: white;
+  border-radius: 30px;
+}
+
+.save-information {
+  display: flex;
+  justify-content: center;
+}
+</style>

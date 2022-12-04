@@ -21,12 +21,9 @@ export default {
           to: { name: 'profile.Information' },
         },
         {
-          title: this.$t('profile.purchases.moduleName'),
-          to: { name: 'profile.Purchases' },
-        },
-        {
-          title: this.$t('profile.family.moduleName'),
-          to: { name: 'profile.Family' },
+          title: this.$t('profile.list.moduleName'),
+          to: { name: 'profile.myList' },
+
         },
       ],
     }

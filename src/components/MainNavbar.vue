@@ -1,6 +1,6 @@
 <template>
   <div class="main-navbar">
-    <b-navbar class="navbar-dark" toggleable="lg" variant="primary">
+    <b-navbar class="navbar" toggleable="lg" variant="">
       <b-container>
         <!-- <div class="navbar-start">
           <b-navbar-brand :to="{ name: 'Home' }">
@@ -12,23 +12,20 @@
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
               <b-nav-item :to="{ name: 'Home' }">
-                Home
+                Home |
               </b-nav-item>
               <b-nav-item >
-                Live
+                Live |
               </b-nav-item>
               <b-nav-item :to="{ name: 'AboutUs' }">{{
-                $t('aboutUs.moduleName')
-              }}</b-nav-item>
+                $t('aboutUs.moduleName') 
+              }} |</b-nav-item>
               <b-nav-item :to="{ name: 'Contacts' }">{{
                 $t('contacts.moduleName')
               }}</b-nav-item>
             </b-navbar-nav>
             <b-nav-form>
-          <b-form-input size="lg" class="search-navbar  " placeholder="Search">
-          
-          </b-form-input>
-          
+        
           
         </b-nav-form>
       
@@ -38,51 +35,6 @@
           
         </div>
         
-        <div>
-          
-          <b-navbar-nav class="ml-auto navbar-login">
-            
-              <b-nav-item-dropdown class="dropdown-lang">
-                
-                <template #button-content>
-                  <i class="fas fa-language" />
-                </template>
-                <b-dropdown-item
-                  v-for="(lang, i) in LANGUAGES"
-                  :key="`Lang${i}`"
-                  @click="changeLanguage(lang)"
-                >
-                  <img class="dropdown-icon" :src="lang.image" alt="" />
-                  <span class="">{{ lang.title }}</span>
-                </b-dropdown-item>
-              </b-nav-item-dropdown>
-
-              <b-nav-item-dropdown>
-                <template #button-content>
-                  <span class="p-2 login">Login</span>
-                  <i class="fas fa-user-circle user"></i>
-                 
-                </template>
-                <template v-if="authorizationToken">
-                  <b-dropdown-item :to="{ name: 'profile.MyMembership' }">{{
-                    $t('profile.moduleName')
-                  }}</b-dropdown-item>
-
-                  <b-dropdown-item @click="logout()">
-                    {{ $t('auth.logout') }}
-                  </b-dropdown-item>
-                </template>
-                <template v-else>
-                  <b-dropdown-item :to="{ name: 'auth.SignIn' }">{{
-                    $t('auth.signIn')
-                  }}</b-dropdown-item>
-                  <b-dropdown-item :to="{ name: 'auth.SignUp' }">{{
-                    $t('auth.signUp')
-                  }}</b-dropdown-item>
-                </template>
-              </b-nav-item-dropdown>
-            </b-navbar-nav>
-        </div>
       </b-container>
     </b-navbar>
   </div>
@@ -127,7 +79,7 @@ export default {
 .main-navbar {
   height: var(--navbar-height);
   nav.navbar {
-    height: 100%;
+    height: 70%;
     .container {
       display: flex;
       // justify-content: space-between;

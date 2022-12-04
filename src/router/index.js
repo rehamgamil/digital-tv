@@ -28,8 +28,8 @@ const MyProfile = () => import('../pages/profile/MyProfile.vue')
 const MyMembership = () =>
   import('../pages/profile/myMembership/MyMembership.vue')
 const Information = () => import('../pages/profile/information/Information.vue')
-const Purchases = () => import('../pages/profile/purchases/Purchases.vue')
-const Family = () => import('../pages/profile/family/Family.vue')
+
+const myList = () => import('../pages/profile/myList/myList.vue')
 //#endregion MyProfile
 
 const AboutUs = () => import('../pages/aboutUs/AboutUs.vue')
@@ -51,14 +51,14 @@ const routes = [
         path: 'order-summary/:id?',
         name: 'OrderSummary',
         component: OrderSummary,
-        meta: { title: 'memberships.orderSummary', auth: true },
+        meta: { title: 'memberships.orderSummary', auth: false },
         props: true,
       },
       {
         path: 'add-member',
         name: 'addMember',
         component: addMember,
-        meta: { title: 'addMember.addMemberInformation', auth: true },
+        meta: { title: 'addMember.addMemberInformation', auth: false },
       },
       {
         path: '/payment',
@@ -106,7 +106,7 @@ const routes = [
       {
         path: '/my-profile',
         component: MyProfile,
-        meta: { title: 'profile.moduleName', auth: true },
+        meta: { title: 'profile.moduleName', auth: false },
         children: [
           {
             path: 'my-membership',
@@ -118,15 +118,11 @@ const routes = [
             name: 'profile.Information',
             component: Information,
           },
+         
           {
-            path: 'purchases',
-            name: 'profile.Purchases',
-            component: Purchases,
-          },
-          {
-            path: 'family',
-            name: 'profile.Family',
-            component: Family,
+            path: 'mylist',
+            name: 'profile.myList',
+            component: myList,
           },
         ],
       },

@@ -1,12 +1,15 @@
 <template>
   <div class="mt-4">
     <b-row>
-      <b-col lg="4" md="6" sm="7" class="mb-3" v-for="(i, key) in items" :key="key">
+      <b-col lg="4" md="6" sm="7" class="mb-3">
+      <!-- <b-col lg="4" md="6" sm="7" class="mb-3" v-for="(i, key) in items" :key="key"> -->
         <b-card class="my-membership-card">
           <b-row>
             <b-col cols="8">
-              <h6 class="fw-bold">{{ i.packagee.packageName }}</h6>
-              <p class="member-details">Until {{ i.end_date.substr(0, 10) }}</p>
+              <!-- <h6 class="fw-bold">{{ i.packagee.packageName }}</h6> -->
+              <h6 class="fw-bold">Golden Membership</h6>
+              <!-- <p class="member-details">Until {{ i.end_date.substr(0, 10) }}</p> -->
+              <p class="member-details">Until 10 jan 2023</p>
             </b-col>
             <b-col cols="4">
               <img
@@ -18,10 +21,12 @@
           </b-row>
           <b-row class="mt-3">
             <b-col cols="8">
-              <P class="member-details">#{{ i.id }}</P>
+              <!-- <P class="member-details">#{{ i.id }}</P> -->
+              <P class="member-details">#1122334455</P>
             </b-col>
             <b-col cols="4">
-              <p class="text-center active">{{ i.status }}</p>
+              <!-- <p class="text-center active">{{ i.status }}</p> -->
+              <p class="text-center active">Active</p>
             </b-col>
           </b-row>
         </b-card>
@@ -51,7 +56,7 @@
       </b-row>
     </b-card> -->
 
-    <b-button v-b-modal.add-dependent variant="primary" class="mt-2">
+    <!-- <b-button v-b-modal.add-dependent variant="primary" class="mt-2">
       <i class="fas fa-user-plus btn-dependent"></i
       >{{ $t('global.addDependent') }}
     </b-button>
@@ -87,34 +92,34 @@
       >
         {{ $t('global.addNewMember') }}
       </b-button>
-    </b-modal>
+    </b-modal> -->
   </div>
 </template>
 
 <script>
-import profileServices from '../profileService'
-import BaseModalContent from '@/components/baseModalContent.vue'
+//import profileServices from '../profileService'
+//import BaseModalContent from '@/components/baseModalContent.vue'
 export default {
   name: 'MyMembership',
-  components: { BaseModalContent },
+  //components: { BaseModalContent },
   data() {
     return {
       items: '',
     }
   },
-  methods: {
-    getAllData() {
-      profileServices.getAllPurchases(1).then((res) => {
-        this.items = res.data.data.memberships
-      })
-    },
-    redirectToAddMember() {
-      this.$router.push({ name: 'addMember' })
-    },
-  },
-  created() {
-    this.getAllData()
-  },
+  // methods: {
+  //   getAllData() {
+  //     profileServices.getAllPurchases(1).then((res) => {
+  //       this.items = res.data.data.memberships
+  //     })
+  //   },
+  //   redirectToAddMember() {
+  //     this.$router.push({ name: 'addMember' })
+  //   },
+  // },
+  // created() {
+  //   this.getAllData()
+  // },
 }
 </script>
 

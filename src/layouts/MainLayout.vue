@@ -1,5 +1,6 @@
 <template>
   <div class="main-layout">
+    <base-navbar/>
     <MainNavbar />
 
     <div class="main-content">
@@ -17,6 +18,7 @@
 import AppFooter from '@/components/ui/AppFooter.vue'
 
 import MainNavbar from '../components/MainNavbar.vue'
+import BaseNavbar from '@/components/navbar/baseNavbar.vue'
 //import PageBanner from '../components/ui/PageBanner.vue'
 
 export default {
@@ -25,6 +27,7 @@ export default {
     MainNavbar,
    // PageBanner,
     AppFooter,
+    BaseNavbar,
   },
   data() {
     return {
