@@ -1,33 +1,30 @@
 <template>
   <div class="main-layout">
-    <base-navbar/>
-    <MainNavbar />
-
+    <main-navbar />
     <div class="main-content">
-      <!-- <PageBanner :pageTitle="getBannerTitle" :height="getHeight" /> -->
-
+      <PageBanner
+        :pageTitle="getBannerTitle"
+        :height="getHeight"
+        :bannerImg="getBannerImg"
+      />
+      <!-- <PageBanner :pageTitle="getBannerTitle" :height="getHeight" />  -->
       <router-view class="container pt-5 pb-5" />
-    </div>
-    <div>
-      <app-footer/>
+      <main-footer v-if="getFooterStatus" />
     </div>
   </div>
 </template>
 
 <script>
-import AppFooter from '@/components/ui/AppFooter.vue'
-
-import MainNavbar from '../components/MainNavbar.vue'
-import BaseNavbar from '@/components/navbar/baseNavbar.vue'
-//import PageBanner from '../components/ui/PageBanner.vue'
+import MainNavbar from '../layouts/components/mainNavbar.vue'
+import MainFooter from '../layouts/components/MainFooter.vue'
+import PageBanner from '../components/ui/PageBanner.vue'
 
 export default {
   name: 'MainLayout',
   components: {
     MainNavbar,
-   // PageBanner,
-    AppFooter,
-    BaseNavbar,
+    MainFooter,
+    PageBanner,
   },
   data() {
     return {
@@ -37,11 +34,18 @@ export default {
   computed: {
     getBannerTitle() {
       const bannerTitle = this.$route.meta.title ? this.$route.meta.title : ''
-      const bannerTitleI18 = this.$route.meta.bannerTitleI18 === false ? false : true
+      const bannerTitleI18 =
+        this.$route.meta.bannerTitleI18 === false ? false : true
       return bannerTitleI18 ? this.$t(bannerTitle) : bannerTitle
     },
     getHeight() {
       return this.$route.meta.height ? this.$route.meta.height : '200px'
+    },
+    getBannerImg() {
+      return this.$route.meta.bannerImg ? this.$route.meta.bannerImg : ''
+    },
+    getFooterStatus() {
+      return this.$route.meta.footerStatus === false ? false : true
     },
   },
 }
@@ -56,6 +60,9 @@ export default {
   .main-content {
     overflow: auto;
     height: var(--main-content-height);
+    > .container {
+      min-height: var(--main-content-container-height);
+    }
   }
 }
 </style>

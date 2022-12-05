@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import store from '@/store'
+import ImgHomeBanner from '@/assets/images/bannerpage.jpg'
 
 //#region layouts
 const MainLayout = () => import('../layouts/MainLayout.vue')
@@ -20,6 +21,9 @@ const PaymentStatus = () => import('../pages/payment/PaymentStatus.vue')
 //#region Auth
 const SignIn = () => import('../pages/auth/SignIn.vue')
 const SignUp = () => import('../pages/auth/SignUp.vue')
+//const VerifyOTP = () => import('../pages/auth/VerifyOTP.vue')
+const ForgetPassword = () => import('../pages/auth/ForgetPassword.vue')
+const SetNewPassword = () => import('../pages/auth/SetNewPassword.vue')
 const ActiveNewClient = () => import('../pages/auth/ActiveNewClient.vue')
 //#endregion Auth
 
@@ -45,7 +49,7 @@ const routes = [
         path: '',
         name: 'Home',
         component: Home,
-        meta: { title: 'global.appName', height: '300px' },
+        meta: { title: 'memberships.item', bannerImg: ImgHomeBanner },
       },
       {
         path: 'order-summary/:id?',
@@ -81,7 +85,7 @@ const routes = [
       },
       {
         path: '/auth',
-        meta: { notAuth: true },
+        meta: { notAuth: true , footerStatus: false },
         children: [
           {
             path: 'sign-in',
@@ -93,13 +97,31 @@ const routes = [
             path: 'sign-up',
             name: 'auth.SignUp',
             component: SignUp,
-           
+            meta: { title: 'auth.signUp' },
           },
           {
             path: 'active-new-client',
             name: 'auth.ActiveNewClient',
             component: ActiveNewClient,
             meta: { title: 'auth.activeNewClient' },
+          },
+          {
+            path: 'forget-password',
+            name: 'auth.ForgetPassword',
+            component: ForgetPassword,
+            meta: { title: 'auth.forgetPassword' },
+          },
+          // {
+          //   path: 'reset-password-otp',
+          //   name: 'auth.ResetPasswordOTP',
+          //   component: VerifyOTP,
+          //   meta: { title: 'auth.otp', target: 'ResetPasswordOTP' },
+          // },
+          {
+            path: 'set-new-password',
+            name: 'auth.SetNewPassword',
+            component: SetNewPassword,
+            meta: { title: 'auth.setNewPassword' },
           },
         ],
       },

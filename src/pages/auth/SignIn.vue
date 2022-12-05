@@ -1,28 +1,34 @@
 <template>
   <div class="auth-page sign-in">
-    <h2 class="text-center pb-5 mb-5">SIGN IN</h2>
-    <b-form @submit.prevent="onSubmit" >
-      <div class="form-signin">
-      <PhonePicker class="phone-input"
-        v-on:valueChanged="user.phone = $event.e164"
-        :label="$t('global.mobileNumber')"
-      /></div>
-      <MainInput
-      class="pass-input"
-        v-model="user.password"
-        :label="$t('global.password')"
-        type="password"
-      />
+    <b-form @submit.prevent="onSubmit">
+      <div class="custom-card">
+        <div>
+          <PhonePicker
+            v-on:valueChanged="user.phone = $event.e164"
+            :label="$t('global.mobileNumber')"
+          />
+          <MainInput
+          v-on:valueChanged="user.password = $event"
+            :label="$t('global.password')"
+            type="password"
+          />
 
-      <div class="mt-3 px-3 d-flex justify-content-between">
-        <b-form-checkbox class="remember-me">
+          <div class="mt-3 px-3 d-flex justify-content-end">
+            <!-- <b-form-checkbox class="remember-me">
           {{ $t('auth.rememberMe') }}
-        </b-form-checkbox>
-        <!-- <router-link :to="{ name: 'auth.SignUp' }" class="text-dark">
-          {{ $t('auth.forgotPassword') }}
-        </router-link> -->
+        </b-form-checkbox> -->
+            <router-link  :to="{ name: 'auth.ForgetPassword' }" class="text-dark">
+              {{ $t('auth.forgetPassword') }}
+            </router-link>
+          </div>
+        </div>
       </div>
-
+      <p class="text-secondary">
+        {{ $t('auth.dontHaveAccount') }}
+        <router-link :to="{ name: 'auth.SignUp' }">
+          {{ $t('auth.createNewAccount') }}
+        </router-link>
+      </p>
       <SubmitBtn
         :label="$t('auth.signIn')"
         :loading="loading"
@@ -31,12 +37,7 @@
       />
     </b-form>
 
-    <p class="text-center text-secondary">
-      {{ $t('auth.dontHaveAccount') }}
-      <router-link :to="{ name: 'auth.SignUp' }" class="text-primary">
-        {{ $t('auth.createNewAccount') }}
-      </router-link>
-    </p>
+    <AuthFooter />
   </div>
 </template>
 
@@ -44,9 +45,11 @@
 import { mapActions } from 'vuex'
 import { core } from '@/config/pluginInit'
 import authService from './auth.service'
+import AuthFooter from './components/AuthFooter.vue'
 
 export default {
   name: 'SignIn',
+  components: { AuthFooter },
   data() {
     return {
       loading: false,
@@ -86,14 +89,8 @@ export default {
 @import '@/assets/styles/auth-page.scss';
 
 .sign-in {
-  max-width: 520px;
-
   .remember-me + label {
     color: var(--co-secondary-text);
   }
-}
-
-.form-signin{
-  border-radius: 60px;
 }
 </style>

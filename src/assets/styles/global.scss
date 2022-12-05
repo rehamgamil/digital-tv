@@ -9,7 +9,7 @@
 
 #app {
   // font-family: Avenir, Helvetica, Arial, sans-serif;
-  font-family: GothamMedium, Helvetica, Arial, sans-serif;
+  font-family: gotham, sans-serif;
 }
 html[lang='ar'] #app {
   font-family: Cairo, Helvetica, Arial, sans-serif;
@@ -26,6 +26,7 @@ html[lang='ar'] #app {
   @include btn-primary;
   width: 300px;
   margin-top: 1.2rem;
+  border-radius: 2rem;
   // text-transform: uppercase;
   &:hover {
     box-shadow: 0px 3px 10px var(--co-primary);

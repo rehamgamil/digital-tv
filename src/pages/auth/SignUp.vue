@@ -1,50 +1,70 @@
 <template>
   <div class="auth-page">
-    <h2 class="text-center mb-5 ">Sign Up</h2>
     <b-form @submit.prevent="onSubmit">
-      
-        <MainInput  class="signup-form " v-model="user.name" :label="$t('global.name')" id="name" />
-     
-        <PhonePicker
-          v-on:valueChanged="user.phone = $event.e164"
-          :label="$t('global.mobileNumber')"
-          id="phoneNumber"
-        />
-        <div class="text-center">
-        <MainInput
-          v-model="user.email"
-          :label="$t('global.email')"
-          id="email"
-          class="email"
-          
-        />
+      <div class="custom-card">
+        <b-row>
+          <b-col md="12">
+            <MainInput
+              v-on:valueChanged="user.name = $event"
+              :label="$t('global.name')"
+              id="name"
+            />
+          </b-col>
+          <b-col md="12">
+            <MainInput
+              v-on:valueChanged="user.email = $event"
+              :label="$t('global.email')"
+              id="email"
+            />
+          </b-col>
+
+          <b-col md="12">
+            <PhonePicker
+              v-on:valueChanged="user.phone = $event.e164"
+              :label="$t('global.mobileNumber')"
+              id="phoneNumber"
+            />
+          </b-col>
+
+
+          <b-col md="6">
+            <DateTimePicker
+              v-on:valueChanged="user.birth_date = $event"
+              :label="$t('global.birthDate')"
+              type="date"
+            />
+          </b-col>
+          <b-col md="6">
+            <MainSelect
+              :options="GENDERS"
+              v-on:valueChanged="user.gender = $event"
+              :label="$t('global.gender')"
+              optionLabelKey="name"
+              optionValueKey="id"
+            />
+          </b-col>
+
+          <b-col md="12">
+            <MainInput
+              v-on:valueChanged="user.password = $event"
+              :label="$t('global.password')"
+              type="password"
+              id="password"
+            />
+          </b-col>
+          <b-col md="12">
+            <MainInput
+              v-on:valueChanged="user.password_confirmation = $event"
+              :label="$t('global.confirmPassword')"
+              type="password"
+              id="user-password_confirmation"
+            />
+          </b-col>
+        </b-row>
       </div>
 
-        <MainSelect
-          :options="GENDERS"
-          v-model="user.gender"
-          :label="$t('global.gender')"
-          optionLabelKey="name"
-          optionValueKey="id"
-        />
-
-        <MainInput
-          v-model="user.password"
-          :label="$t('global.password')"
-          type="password"
-          id="password"
-        />
-
-        <MainInput
-          v-model="user.password_confirmation"
-          :label="$t('global.confirmPassword')"
-          type="password"
-          id="user-password_confirmation"
-        />
-    
-
       <SubmitBtn
-        label="Sign UP"
+        :label="$t('auth.createNewAccount')"
         :loading="loading"
         className="btn-auth"
         position="center"
@@ -53,20 +73,24 @@
 
     <p class="text-center text-secondary">
       {{ $t('auth.alreadyHaveAccount') }}
-      <router-link :to="{ name: 'auth.SignIn' }" class="text-primary">
+      <router-link :to="{ name: 'auth.SignIn' }">
         {{ $t('auth.signIn') }}
       </router-link>
     </p>
+
+    <AuthFooter />
   </div>
 </template>
 
 <script>
+import AuthFooter from './components/AuthFooter.vue'
 import { mapActions } from 'vuex'
 import { GENDERS } from '@/config/constantLists'
 import authService from './auth.service'
 
 export default {
   name: 'SignUp',
+  components: { AuthFooter },
   data() {
     return {
       loading: false,
@@ -104,7 +128,5 @@ export default {
 <style lang="scss">
 @import '@/assets/styles/auth-page.scss';
 
-.auth-page {
-  width: 520px;
-}
+
 </style>

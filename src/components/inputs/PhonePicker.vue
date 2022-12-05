@@ -1,4 +1,5 @@
 <template>
+  <label class="input-label">{{ label }}</label>
   <MazPhoneNumberInput
     :key="phoneCCName"
     v-model="phoneNumber"
@@ -19,7 +20,7 @@
     @update="results = $event"
     :success="results?.isValid"
     :disabled="disabled"
-    class="phone"
+   
   />
 </template>
 

@@ -1,9 +1,18 @@
 // #region inputs
+:root {
+  --maz-color-primary: var(--co-primary);
+}
 .m-input,
 .m-phone-number-input,
 .main-select,
 .main-textarea {
   margin: 0 0.5rem 1rem;
+}
+.input-label {
+  margin: 0 0.5rem;
+}
+.m-input-wrapper.--default-border {
+  border-radius: 5px;
 }
 // #endregion inputs
 
@@ -14,7 +23,8 @@
 }
 
 html[lang='ar'] .m-phone-number-input__country-flag {
-  right: 18px;
+ // right: 18px;
+  right: 75px;
   left: initial !important;
 }
 
@@ -22,8 +32,9 @@ html[lang='ar'] .m-phone-number-input__country-flag {
   .m-phone-number-input__select
   .m-input-wrapper
   input {
-  padding-left: initial !important;
-  padding-inline-start: 2.75rem;
+  // padding-left: initial !important;
+  // padding-inline-start: 2.75rem;
+  direction: ltr;
 }
 
 .m-phone-number-input__select:not(.--no-country-code) .m-input-wrapper {

@@ -57,7 +57,7 @@
         hide-footer
         centered
       >
-        <base-modal-content />
+       
         <div class="text-center payment-modal py-3">
           <img
             src="@/assets/images/icons/success.png"
@@ -106,9 +106,9 @@
 </template>
 
 <script>
-import BaseModalContent from '@/components/baseModalContent.vue'
+
 export default {
-  components: { BaseModalContent },
+  components: {  },
   props: {
     orderData: { type: Object },
   },

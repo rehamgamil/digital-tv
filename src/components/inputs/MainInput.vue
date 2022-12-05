@@ -1,12 +1,16 @@
 <template>
-  <MazInput
-    v-model="inputValue"
-    :id="id"
-    :label="label"
-    :type="type"
-    :disabled="disabled"
-    :autocomplete="autocomplete ? 'on' : 'off'"
-  />
+  <div>
+    <p v-if="labelStatus" class="input-label">{{ label }}</p>
+
+    <MazInput
+      v-model="inputValue"
+      :id="id"
+      :placeholder="label"
+      :type="type"
+      :disabled="disabled"
+      :autocomplete="autocomplete ? 'on' : 'off'"
+    />
+  </div>
 </template>
 
 <script>
@@ -23,6 +27,10 @@ export default {
     label: {
       default: '',
       type: String,
+    },
+    labelStatus: {
+      default: true,
+      type: Boolean,
     },
     value: {
       default: '',
@@ -50,12 +58,9 @@ export default {
       this.inputValue = val
     },
     inputValue: function (val) {
-      this.$emit('input', val)
+      this.$emit('valueChanged', val)
     },
   },
 }
 </script>
 
-<style>
-
-</style>

@@ -45,9 +45,22 @@
   margin-inline: 0.255em;
 }
 .dropdown-menu {
+  --bs-dropdown-link-active-bg: #8d99ae;
   text-align: initial;
 }
 .dropdown-menu[data-bs-popper] {
   left: initial;
 }
 // #endregion dropdown
+
+// #region inputs
+.form-check {
+  padding: initial;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  .form-check-input {
+    float: initial;
+    margin: initial;
+  }
+}

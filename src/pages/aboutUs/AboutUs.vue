@@ -1,8 +1,7 @@
 <template>
- <page-banner pageTitle="About Us"/>
   <div class="about">
    
-    <b-container class="mt-5">
+    <b-container class="mt-3">
       <!-- <h6 class="fw-bold">{{ aboutUsDescription.title }}</h6> -->
       <h3 class="fw-bold">Sub Title</h3>
       <p class="about-des">
@@ -14,10 +13,9 @@
 </template>
 
 <script>
-import PageBanner from '@/components/ui/PageBanner.vue'
 import aboutUsService from './aboutUs.service'
 export default {
-  components: { PageBanner },
+  components: {  },
   name: 'AboutUs',
   data() {
     return {

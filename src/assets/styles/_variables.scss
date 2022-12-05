@@ -1,9 +1,18 @@
 :root {
-  --navbar-height: 72px;
-  --main-content-height: calc(100vh - var(--navbar-height))
+  --navbar-header-height: 48px;
+  --navbar-content-height: 73.16px;
+  --navbar-height: calc(
+    var(--navbar-header-height) + var(--navbar-content-height)
+  );
+  --main-content-height: calc(100vh - var(--navbar-height));
+  --main-content-container-height: calc(
+    100vh - var(--navbar-height) - var(--footer-height) - 200px
+  );
+  --footer-height: 52px;
 }
 
 $max-width-mobile: 600px;
 $max-width-tablet: 768px;
 $max-width-labtop: 992px;
 $max-width-labtop-lg: 1200px;
+

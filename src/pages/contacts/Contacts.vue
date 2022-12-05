@@ -1,5 +1,4 @@
 <template>
- <page-banner pageTitle="Contact US"/>
  <b-container>
   <div>
    
@@ -52,7 +51,7 @@
           <SubmitBtn
             :label="$t('contact.send')"
             :loading="loading"
-            class=" p-3 "
+            class=" p-3 btn "
             className="btn-auth"
            position="center"
           />
@@ -126,11 +125,10 @@
 import { core } from '@/config/pluginInit'
 import contactsService from './contacts.service'
 import MazDialog from 'maz-ui/components/MazDialog'
-import PageBanner from '@/components/ui/PageBanner.vue'
 
 export default {
   name: 'ContactsPage',
-  components: { MazDialog,PageBanner },
+  components: { MazDialog },
   data() {
     return {
       loading: false,
@@ -164,17 +162,11 @@ export default {
 </script>
 
 <style lang="scss">
-.contact-form {
-  
-  .btn-send:hover {
-    box-shadow: 0px 6px 20px var(--co-primary);
-  }
-}
 .form-group {
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 6px #312c1e0f, 0px 1px 14px #0000000a;
   border: 0.5px solid #0e1815;
-  border-radius: 20px;
+  border-radius: 10px;
   opacity: 1;
 }
 
@@ -190,7 +182,7 @@ export default {
   }
   .icon-info {
     color: var(--co-secondary-text);
-    font: normal normal normal 24px/29px Gotham Rounded;
+   // font: normal normal normal 24px/29px Gotham Rounded;
   }
 }
 #contact-send .modal-header {
@@ -212,6 +204,13 @@ export default {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.send-btn{
+  .btn{
+    padding: 10px;
+
+  }
 }
 
 </style>

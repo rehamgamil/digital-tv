@@ -1,8 +1,9 @@
 :root {
   --co-primary: #000000;
-  --co-primary-light: #17d97b;
-  --co-primary-dark: #024726;
-  --co-primary-rgb: 0, 105, 55;
+  // --co-primary-light: #17d97b;
+  // --co-primary-dark: #024726;
+  --co-primary-dark: #000000;
+  --co-primary-rgb: 0, 0, 0;
   /* --co-secondary: #ff7a29; */
   /* --co-secondary-light: #ffdfcc; */
   /* --co-secondary-dark: #cc4d00; */
@@ -10,7 +11,7 @@
 
   --co-navbar: var(--co-primary);
 
-  --co-body-bg: #f8f7fd;
+  --co-body-bg: #ffffff;
   --co-body-text: #0e1815;
   --co-primary-text: #fefefe;
   --co-secondary-text: #919795;
